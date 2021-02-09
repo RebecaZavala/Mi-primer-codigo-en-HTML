@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <litle>" El peso que no pesa saber "</litle>
+    <style>
+    body
+    {
+      background: pink;
+      color: black;
+      font-family: Bradley Hand ITC;
+    }
+    </style>
+  </head>
+  <body>
+
+    <h1>Tu peso en otro planeta</h1>
+    <p>Calcula tu peso en otro Planeta</p>
+    <script type="text/javascript">
+    var usuario = prompt("Cual es tu peso?");
+    var planeta = prompt("Elige tu planeta. El numero 1 es Marte, el numero 2 es Jupiter");
+    var peso = parseInt(usuario);
+    var g_tierra = 9.8;
+    var g_marte = 3.7;
+    var g_jupiter = 24.8;
+    var peso_final;
+    if (planeta == 1)
+    {
+        peso_final = peso * g_marte / g_tierra;
+    }
+    else if(planeta == 2)
+    {
+        peso_final = peso * g_jupiter / g_tierra;
+    }
+    else
+    {
+        peso_final = 10000
+    }
+    peso_final = parseInt(peso_final);
+    document.write("Tu peso en Marte es <strong>" + peso_final + " Kilos</strong>");
+    </script>
+  </body>
+</html>
